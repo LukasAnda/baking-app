@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/recipe_card_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rv_card_height"
+        android:layout_margin="@dimen/rv_card_spacing"
+        android:textSize="@dimen/rv_card_text_size"
+        android:elevation="@dimen/rv_card_elevation"
+        android:gravity="center"
+        android:background="@android:color/darker_gray"
+        tools:ignore="UnusedAttribute" />

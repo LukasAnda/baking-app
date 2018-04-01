@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+    <fragment
+            android:id="@+id/recipe_detail_fragment"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:name="com.lukasanda.bakingapp.ui.fragments.RecipeStepsFragment" />
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".7"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:id="@+id/right_fragments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:orientation="vertical">
+
+            <fragment
+                    android:id="@+id/recipe_video_fragment_tablet"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".6"
+                    android:name="com.lukasanda.bakingapp.ui.fragments.StepVideoFragment" />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".05" />
+
+            <fragment
+                    android:id="@+id/recipe_step_detail_fragment_tablet"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".35"
+                    android:name="com.lukasanda.bakingapp.ui.fragments.StepDetailFragment" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
