@@ -8,4 +8,6 @@
     <string name="no_recipes">No recipes</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="invalid_recipe"><![CDATA[Invalid recipe -> exiting]]></string>
+    <string name="download_failed">Download failed</string>
 </resources>

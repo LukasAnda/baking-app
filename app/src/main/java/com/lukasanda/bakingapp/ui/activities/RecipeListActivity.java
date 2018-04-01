@@ -158,7 +158,10 @@ public class RecipeListActivity extends AppCompatActivity implements RecipesAdap
             @Override
             public void onError() {
                 //Show some info to user that the download failed
-                Log.d("Tag", "Download failed");
+                Toast.makeText(RecipeListActivity.this, R.string.download_failed, Toast.LENGTH_SHORT).show();
+                if (mIdlingResource != null) {
+                    mIdlingResource.setIdleState(true);
+                }
             }
         });
     }

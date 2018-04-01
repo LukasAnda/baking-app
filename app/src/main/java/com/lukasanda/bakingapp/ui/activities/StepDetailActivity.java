@@ -54,7 +54,6 @@ public class StepDetailActivity extends AppCompatActivity {
                 currentStep = getIntent().getExtras().getParcelable(RECIPE_STEP_KEY);
                 recipe = getIntent().getExtras().getParcelable(RECIPE_KEY);
             } catch (NullPointerException e) {
-                Log.d(TAG, "Recipe from intent was null: " + e.getMessage());
                 finish();
                 return;
             }
@@ -67,7 +66,7 @@ public class StepDetailActivity extends AppCompatActivity {
         }
         
         if (currentStep == null) {
-            Toast.makeText(this, "Recipe was null... exiting", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.invalid_recipe, Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
@@ -132,7 +131,6 @@ public class StepDetailActivity extends AppCompatActivity {
         } else {
             videoFragment.stopPlayer();
             videoFragment.reset();
-            Log.d(TAG, "URL and thumbnailURL were null");
         }
     }
     

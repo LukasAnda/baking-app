@@ -71,14 +71,12 @@ public class RecipeActivity extends AppCompatActivity implements RecipeStepAdapt
                 recipe = getIntent().getExtras().getParcelable(RECIPE_KEY);
                 fromWidget = getIntent().getExtras().getBoolean(FROM_WIDGET_KEY, false);
                 if (recipe == null) {
-                    Log.d(TAG, "Recipe from intent was null");
                     finish();
                     return;
                 }
                 currentStep = recipe.getSteps().first();
                 setupView();
             } catch (NullPointerException e) {
-                Log.d(TAG, "Recipe from intent was null: " + e.getMessage());
                 finish();
             }
         } else {
@@ -128,7 +126,6 @@ public class RecipeActivity extends AppCompatActivity implements RecipeStepAdapt
             } else {
                 videoFragment.stopPlayer();
                 videoFragment.reset();
-                Log.d(TAG, "URL and thumbnailURL were null");
             }
         }
     }
